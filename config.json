@@ -1,0 +1,10 @@
+{
+    "warehouse":
+    {
+        "host":"192.168.0.108",
+        "database":"warehouse",
+        "user":"postgres",
+        "password":"postgres",
+        "port":5432
+    }
+}
