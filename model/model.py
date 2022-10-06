@@ -20,5 +20,4 @@ X = encoder.fit_transform(X)
 model = DecisionTreeClassifier(random_state=42)
 model.fit(X, y)
 
-with open(os.getcwd()+'/model.pkl', 'wb') as file:
-    pickle.dump(model, file)
+pickle.dump(model, open(os.getcwd()+'/model.pkl', 'wb'))

@@ -30,7 +30,7 @@ if __name__ == '__main__':
         print(f'Records = {data}')
 
         model = pickle.load(open(os.getcwd()+'/model/model.pkl', 'rb'))
-        prediction = 'Fraud' if model.predict(transform(df)) == 0 else 'Not Fraud'
+        prediction = 'Not Fraud' if model.predict(transform(df)) == 0 else 'Fraud'
 
         df = pd.DataFrame([{'Id': data['Id'], 'userFlag':prediction}])
         df.to_sql('user_fraud', connection.warehouse(), if_exists='append', index=False)
